@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/image-url": "^1.0.1",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "moment": "^2.29.1",
+    "next": "latest",
+    "nextjs-progressbar": "0.0.13",
+    "octokit": "^1.7.1",
+    "querystring": "^0.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-moment": "^1.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+  }
+}
