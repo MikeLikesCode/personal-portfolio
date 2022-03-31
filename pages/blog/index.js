@@ -105,7 +105,6 @@ export default function Blog({ posts }) {
                           key={idx}
                           className="mr-4 text-xl text-theme-lgray font-normal bg-[#617e77] px-4 py-[1px] rounded-sm text-[0.95rem] font-bold"
                         >
-                          {" "}
                           {cat}
                         </p>
                       ) : null
