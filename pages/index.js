@@ -20,7 +20,6 @@ import Footer from "../components/Footer";
 import moment from "moment";
 
 export default function Home({ posts, github }) {
-  
   const [mappedPost, setMappedPost] = useState([]);
   const [nowPlaying, setNowPlaying] = useState({});
 
@@ -76,23 +75,29 @@ export default function Home({ posts, github }) {
           <span className="text-[#84A98C]">I'm Michael Guerrero.</span>
         </h1>
         <p className="text-theme-textSecondary w-11/12 lg:w-1/2 text-center text-2xl lg:text-4xl mt-3 font-normal lg:font-extralight">
-          I'm a Full Stack Developer who learns by working on random
-          projects.
+          I'm a Full Stack Developer who learns by working on random projects.
         </p>
 
         <div className="flex flex-col lg:flex-row my-10 text-theme-details">
           <p className="flex text-md mx-8 items-center">
             <Spotify className="text-4xl mr-3" /> Listening to - <br />{" "}
             {nowPlaying.isPlaying && nowPlaying.title
-              ? `${nowPlaying.title.length > 25 ? nowPlaying.title.slice(0, 25) + "..." : nowPlaying.title} by ${nowPlaying.artist}`
+              ? `${
+                  nowPlaying.title.length > 25
+                    ? nowPlaying.title.slice(0, 25) + "..."
+                    : nowPlaying.title
+                } by ${nowPlaying.artist}`
               : "Nothing Right Now"}
           </p>
           <p className="flex text-md my-6 lg:my-0 mx-8 items-center">
-            <Book className="text-4xl mr-3" /> Currently Reading - <br /> Darkness At Noon{" "}
+            <Book className="text-4xl mr-3" /> Currently Reading - <br />{" "}
+            Darkness At Noon{" "}
           </p>
           <p className="flex text-md mx-8 items-center">
             <Github className="text-4xl mr-3" /> Last Pushed - <br />{" "}
-            { github[0] ? moment((github[0].created_at)).format("MMMM Do"): "Github is down?"}
+            {github[0]
+              ? moment(github[0].created_at).format("MMMM Do")
+              : "Github is down?"}
           </p>
         </div>
 
@@ -115,10 +120,10 @@ export default function Home({ posts, github }) {
                 helps a long way.
               </h1>
               <p className="text-3xl leading-snug font-light">
-                I'm currently a freelancer and Full Time Full Stack Developer. I've
-                been developing websites and web apps personally and in programs
-                throughout my high school years and have become more interested
-                in learning more about coding.
+                I'm currently a freelancer and Full Time Full Stack Developer.
+                I've been developing websites and web apps personally and in
+                programs throughout my high school years and have become more
+                interested in learning more about coding.
               </p>
 
               <div className="flex items-center font-medium mt-5">
@@ -140,7 +145,11 @@ export default function Home({ posts, github }) {
                 </p>
                 <div className="mt-8 text-3xl text-theme-accent underline">
                   <div>
-                    <a className="w-full flex flex-col lg:flex-row lg:items-center" rel="noreferrer" href="mailto:mguerrero.codes@gmail.com">
+                    <a
+                      className="w-full flex flex-col lg:flex-row lg:items-center"
+                      rel="noreferrer"
+                      href="mailto:mguerrero.codes@gmail.com"
+                    >
                       <span className="text-2xl lg:text-3xl">
                         mguerrero.codes@gmail.com
                       </span>
@@ -215,20 +224,20 @@ export default function Home({ posts, github }) {
         </div>
 
         <div className="hidden xl:block flex mt-14 flex-col items-center justify-center pb-10">
-            <div>
-              <h1 className="text-center text-4xl leading-[50px] mb-2">
-                Check out my other projects
+          <div>
+            <h1 className="text-center text-4xl leading-[50px] mb-2">
+              Check out my other projects
+            </h1>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="bg-[#CAD2C5] text-center w-1/6 px-8 py-1 rounded-[2px]">
+              <h1 className="text-xl font-medium text-black font-regular">
+                <Link href="/projects">All projects</Link>
               </h1>
             </div>
-
-            <div className="flex justify-center">
-              <div className="bg-[#CAD2C5] text-center w-1/6 px-8 py-1 rounded-[2px]">
-                <h1 className="text-xl font-medium text-black font-regular">
-                  <Link href="/projects">All projects</Link>
-                </h1>
-              </div>
-            </div>
           </div>
+        </div>
       </section>
 
       <Footer />
@@ -246,13 +255,15 @@ export const getServerSideProps = async (pageContext) => {
   const result = await fetch(url).then((res) => res.json());
 
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-  const github = await octokit.request(`https://api.github.com/users/mikelikescode/events`)
-    .then((res) => {return res.data})
+  const github = await octokit
+    .request(`https://api.github.com/users/mikelikescode/events`)
+    .then((res) => {
+      return res.data;
+    })
     .catch((err) => {
-      console.log(err)
-      return {}
+      console.log(err);
+      return {};
     });
-
 
   if (!result.result || !result.result.length) {
     return {
@@ -264,7 +275,7 @@ export const getServerSideProps = async (pageContext) => {
     return {
       props: {
         posts: result.result,
-        github
+        github,
       },
     };
   }
