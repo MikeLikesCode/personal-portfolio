@@ -40,7 +40,7 @@ export default function Blog({ posts }) {
       <Header />
 
       <div>
-        <div className="flex flex-col lg:flex-row gap-x-10 mt-20 lg:mt-32 px-0 lg:px-16 mb-20 lg:mb-0 text-white">
+        <div className="flex flex-col lg:flex-row gap-x-10 mt-28 lg:mt-32 px-5 lg:px-16 mb-20 lg:mb-0 text-white">
           <div className="w-full lg:w-2/4">
             <img
               alt={mappedPost[0].title}

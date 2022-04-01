@@ -3,24 +3,23 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      'sm': '640px',
+      sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1080px',
+      lg: "1080px",
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1480px',
+      xl: "1480px",
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1536px',
+      "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
-    }, 
+    },
 
     extend: {},
   },
@@ -28,4 +27,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
