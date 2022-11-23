@@ -75,17 +75,6 @@ export default function Header({ title }) {
                 ></div>
               </li>
 
-              <li className="flex flex-col items-center mr-12">
-                <Link href="/blog">Blog</Link>
-                <div
-                  className={
-                    router.pathname == "/blog"
-                      ? "h-[4px] w-[4px] bg-[#cad2c5] rounded-[50%]"
-                      : ""
-                  }
-                ></div>
-              </li>
-
               <li className="flex flex-col items-center">
                 <h1 className="text-xl font-regular">
                   <Link href="mailto:mguerrero.codes@gmail.com">Contact</Link>
