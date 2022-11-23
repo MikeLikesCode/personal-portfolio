@@ -8,17 +8,14 @@ const Christmas = () => {
     <div>
 
       <Header />
-      <div className='my-[16vh] md:my-[12vh] lg:px-16 px-10'>
+      <div className='my-[16vh] md:my-[12vh] lg:px-16 px-4'>
         <section>
           <div className='h-[45vh] md:h-[65vh] bg-[url("https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100")] bg-contain rounded-[10px]'>
             <div className='flex justify-center items-center frosted'>
-              <div className='relative bg-[#0b2624] py-8 px-10 md:px-20 w-[350px] md:w-[825px]'>
-                <div className='-rotate-12 absolute left-[-35px] md:left-[-85px] top-[30px] md:top-0 bottom-0 text-[4em] lg:text-[8em]'>
-                  🎄
-                </div>
-                <h3 className='text-center md:text-left text-white font-bold text-md md:text-2xl py-1 tracking-wide'>Christmas 2022</h3>
-                <h2 className='text-center md:text-left text-white text-3xl md:text-6xl font-medium py-1'>Michael's Wish list</h2>
-                <p className='text-center md:text-left tracking-tight text-white font-normal text-sm md:text-xl py-2'>Feel free to get me what you like ❤️</p>
+              <div className='relative bg-[#0b2624] py-4 md:py-6 px-4 md:px-20 w-[350px] md:w-[825px]'>
+                <h3 className='text-center md:text-left text-white font-bold text-md md:text-xl py-1 tracking-wide'>Christmas 2022</h3>
+                <h2 className='text-center md:text-left text-white text-3xl md:text-5xl font-medium py-1'>Michael's Wish list</h2>
+                <p className='text-center md:text-left tracking-tight text-white font-normal text-sm md:text-lg py-2'>Feel free to get me what you like ❤️</p>
               </div>
             </div>
           </div>
