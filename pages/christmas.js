@@ -10,7 +10,7 @@ const Christmas = () => {
       <Header />
       <div className='my-[16vh] md:my-[12vh] lg:px-16 px-10'>
         <section>
-          <div className='h-[45vh] md:h-[65vh] bg-[url("../public/bg-christmas.jpg")] bg-contain rounded-[10px]'>
+          <div className='h-[45vh] md:h-[65vh] bg-[url("https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=100")] bg-contain rounded-[10px]'>
             <div className='flex justify-center items-center frosted'>
               <div className='relative bg-[#0b2624] py-8 px-10 md:px-20 w-[350px] md:w-[825px]'>
                 <div className='-rotate-12 absolute left-[-35px] md:left-[-85px] top-[30px] md:top-0 bottom-0 text-[4em] lg:text-[8em]'>
